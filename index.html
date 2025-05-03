@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Satunnaislaskin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Satunnaislaskin</h1>
+
+    <!-- Rivi 1: Laskutoimitus -->
+    <div class="calc-area">
+      <div class="number-control">
+        <label>Luku A:</label>
+        <button onclick="changeValue('numberA', -1)">-</button>
+        <input id="numberA" type="text" readonly>
+        <button onclick="changeValue('numberA', 1)">+</button>
+      </div>
+      <div class="number-control">
+        <label>Luku B:</label>
+        <button onclick="changeValue('numberB', -1)">-</button>
+        <input id="numberB" type="text" readonly>
+        <button onclick="changeValue('numberB', 1)">+</button>
+      </div>
+      <div class="operator-control">
+        <label for="operator">Operaatio:</label>
+        <select id="operator">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Rivi 2: Laske-painike ja tulos -->
+    <div class="result-area">
+      <button onclick="calculate()">Laske</button>
+      <h2 id="result">Tulos:</h2>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
